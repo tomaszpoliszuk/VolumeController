@@ -1,0 +1,10 @@
+{
+	entry = {
+		cell = PSLinkCell;
+		isController = 1;
+		label = "Volume Controller";
+		bundle = VolumeControllerPreferences;
+		detail = VolumeControllerMainPreferences;
+		icon = icons/VolumeController.png;
+	};
+}
