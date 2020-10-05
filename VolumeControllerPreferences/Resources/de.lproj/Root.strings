@@ -1,0 +1,37 @@
+{
+	ENABLE_TWEAK = "Tweak an/aus";
+	SIZE = "Größe anpassen";
+	SLIM = "Schmal";
+	MEDIUM = "Mittelgroß";
+	BOLD = "Groß";
+	DEFAULT = "Standard";
+	SIMPLE = "Einfach";
+	CUSTOM = "Angepasst";
+	WIDTH_ = "Breite:";
+	HEIGHT_ = "Höhe:";
+	BORDER_RADIUS_ = "Eckradius:";
+	VOLUME_HUD = "Lautstärke-HUD";
+	VOLUME_HUD_INFO = "Größe und Position des Lautstärke-HUD einstellen";
+	IN_PORTRAIT_MODE = "im Hochformat";
+	IN_LANDSCAPE_MODE = "im Querformat";
+	VOLUME_HUD_IN_PORTRAIT_MODE = "Lautstärke-HUD im Hochformat";
+	VOLUME_HUD_IN_LANDSCAPE_MODE = "Lautstärke-HUD im Querformat";
+	VOLUME_HUD_SIZE_INFO = "Es gibt drei Größen des Lautstärke-HUD:\n\nMittelgroß\nerscheint, wenn einer der Lautstärkebuttons einmal gedrückt wird\n\nSchmal\nerscheint, wenn einer der Lautstärkebuttons mehr als einmal gedrückt wird\n\nBreit\nerscheint, wenn das Lautstärke-HUD selbst berührt wird";
+	VOLUME_HUD_SIZE_INFO_SLIM = "erscheint, wenn einer der Lautstärkebuttons mehr als einmal gedrückt wird";
+	VOLUME_HUD_SIZE_INFO_MEDIUM = "erscheint, wenn einer der Lautstärkebuttons einmal gedrückt wird";
+	VOLUME_HUD_SIZE_INFO_BOLD = "erscheint, wenn das Lautstärke-HUD selbst berührt wird";
+	POSITION = "Position";
+	POSITION_INFO = "Die Werte bestimmen die Position des HUD.\n\nx=0 & y=0\nlässt es in der oberen linken Ecke erscheinen.\n\nx=100 & y=100\nlässt es in der unteren rechten Ecke erscheinen.";
+	POSITION_PLACEHOLDER = "Werte sind Prozentwerte";
+	X_AXIS = "X-Achse";
+	Y_AXIS = "Y-Achse";
+	VOLUME_BUTTONS = "Lautstärke-Buttons";
+	VOLUME_STEPS = "Schritte der Lautstärkeregelung";
+	VOLUME_STEPS_INFO = "Wie oft der Lautstärkebutton gedrückt werden muss, um von 0 auf 100% zu kommen";
+	RESET_SETTINGS = "Einstellungen zurücksetzen";
+	RELATED_LINKS = "Links";
+	SOURCE_CODE = "Source Code";
+	KNOWN_ISSUES = "Bekannte Probleme";
+	TOMASZ_POLISZUK_AT_GITHUB = "Tomasz Poliszuk @ Github";
+	TOMASZ_POLISZUK_AT_TWITTER = "Tomasz Poliszuk @ Twitter";
+}
