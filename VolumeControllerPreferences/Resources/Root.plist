@@ -4,7 +4,7 @@
 		{
 			cell = PSSwitchCell;
 			key = "enableTweak";
-			label = "Enable Tweak";
+			label = ENABLE_TWEAK;
 			default = 1;
 			defaults = com.tomaszpoliszuk.volumecontroller;
 			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
@@ -13,97 +13,18 @@
 		},
 		{
 			cell = PSGroupCell;
-			footerText = "How many times you need to press volume button to go from 0 to 100%";
-		},
-		{
-			cell = PSEditTextCell;
-			key = "volumeSteps";
-			label = "Volume Steps";
-			default = 16;
-			defaults = com.tomaszpoliszuk.volumecontroller;
-			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-			noAutoCorrect = 0;
-			keyboard = numbers;
-			isNumeric = 1;
-			placeholder = "default is 16";
-		},
-		{
-			cell = PSGroupCell;
-			label = " ";
+			label = VOLUME_HUD;
+			footerText = VOLUME_HUD_INFO;
 		},
 		{
 			cell = PSLinkCell;
-			label = "Volume HUD";
-			detail = "PSListController";
-			title = "Volume HUD";
+			label = IN_PORTRAIT_MODE;
+			detail = "VolumeControllerPortraitVolumeHud";
+			title = VOLUME_HUD_IN_PORTRAIT_MODE;
 			items = (
 				{
 					cell = PSGroupCell;
-					label = "Icon";
-				},
-				{
-					cell = PSSegmentCell;
-					key = "showIcon";
-					default = 999;
-					defaults = com.tomaszpoliszuk.volumecontroller;
-					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-					validValues = (
-						999,
-						404,
-					);
-					validTitles = (
-						Default,
-						Hide,
-					);
-					height = 55;
-				},
-				{
-					cell = PSGroupCell;
-					label = "HUD type for Portrait Orientation ";
-				},
-				{
-					cell = PSSegmentCell;
-					key = "hudTypeForPortraitOrientation";
-					default = 999;
-					defaults = com.tomaszpoliszuk.volumecontroller;
-					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-					validValues = (
-						999,
-						1,
-						2,
-					);
-					validTitles = (
-						Default,
-						Landscape,
-						Portrait,
-					);
-					height = 55;
-				},
-				{
-					cell = PSGroupCell;
-					label = "HUD type for Landscape Orientation";
-				},
-				{
-					cell = PSSegmentCell;
-					key = "hudTypeForLandscapeOrientation";
-					default = 999;
-					defaults = com.tomaszpoliszuk.volumecontroller;
-					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-					validValues = (
-						999,
-						1,
-						2,
-					);
-					validTitles = (
-						Default,
-						Landscape,
-						Portrait,
-					);
-					height = 55;
-				},
-				{
-					cell = PSGroupCell;
-					label = "Size of Portrait Volume HUD";
+					label = SIZE;
 				},
 				{
 					cell = PSSegmentCell;
@@ -117,138 +38,140 @@
 						1,
 					);
 					validTitles = (
-						Default,
-						"Simple",
-						"Custom",
+						DEFAULT,
+						SIMPLE,
+						CUSTOM,
 					);
 					height = 55;
 				},
 				{
 					cell = PSLinkListCell;
 					key = "simplePortraitSize";
-					label = "Simple";
-					default = 999;
+					label = SIMPLE;
+					staticTextMessage = VOLUME_HUD_SIZE_INFO;
+					default = 2;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					detail = PSListItemsController;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 					validValues = (
-						999,
 						2,
 						1,
 						3,
 					);
 					validTitles = (
-						Default,
-						Small,
-						Regular,
-						Big,
+						SLIM,
+						MEDIUM,
+						BOLD,
 					);
 				},
 				{
 					cell = PSLinkCell;
-					label = "Custom";
-					detail = "PSListController";
-					title = "Custom";
+					label = CUSTOM;
+					detail = "VolumeControllerPortraitVolumeHudCustomSize";
+					title = CUSTOM;
 					items = (
 						{
 							cell = PSGroupCell;
-							label = "Regular";
+							label = SLIM;
+							footerText = VOLUME_HUD_SIZE_INFO_SLIM;
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizePortraitFor1";
-							default = "47";
-							placeholder = "47";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizePortraitFor1";
-							default = "148";
-							placeholder = "148";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusPortraitFor1";
-							default = "9";
-							placeholder = "9";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSGroupCell;
-							label = "Small";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizePortraitFor2";
-							default = "7";
+							label = WIDTH_;
+							key = "portraitState2Width";
 							placeholder = "7";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizePortraitFor2";
-							default = "134";
+							label = HEIGHT_;
+							key = "portraitState2Height";
 							placeholder = "134";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusPortraitFor2";
-							default = "3.5";
+							label = BORDER_RADIUS_;
+							key = "portraitState2CornerRadius";
 							placeholder = "3.5";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSGroupCell;
-							label = "Big";
+							label = MEDIUM;
+							footerText = VOLUME_HUD_SIZE_INFO_MEDIUM;
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizePortraitFor3";
-							default = "58";
+							label = WIDTH_;
+							key = "portraitState1Width";
+							placeholder = "47";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSEditTextCell;
+							label = HEIGHT_;
+							key = "portraitState1Height";
+							placeholder = "148";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSEditTextCell;
+							label = BORDER_RADIUS_;
+							key = "portraitState1CornerRadius";
+							placeholder = "15";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSGroupCell;
+							label = BOLD;
+							footerText = VOLUME_HUD_SIZE_INFO_BOLD;
+						},
+						{
+							cell = PSEditTextCell;
+							label = WIDTH_;
+							key = "portraitState3Width";
 							placeholder = "58";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizePortraitFor3";
-							default = "170";
+							label = HEIGHT_;
+							key = "portraitState3Height";
 							placeholder = "170";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusPortraitFor3";
-							default = "18";
+							label = BORDER_RADIUS_;
+							key = "portraitState3CornerRadius";
 							placeholder = "18";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
@@ -256,47 +179,38 @@
 				},
 				{
 					cell = PSGroupCell;
-					label = "Position of Portrait Volume HUD";
-				},
-				{
-					cell = PSSegmentCell;
-					key = "controlPortraitPosition";
-					default = 999;
-					defaults = com.tomaszpoliszuk.volumecontroller;
-					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-					validValues = (
-						999,
-						1,
-					);
-					validTitles = (
-						Default,
-						"Custom",
-					);
-					height = 55;
+					label = POSITION;
+					footerText = POSITION_INFO;
 				},
 				{
 					cell = PSEditTextCell;
-					label = "From Top:";
-					key = "positionPortraitTop";
-					default = "141";
-					placeholder = "141";
+					label = Y_AXIS;
+					key = "portraitYaxis";
+					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 				},
 				{
 					cell = PSEditTextCell;
-					label = "From Left:";
-					key = "positionPortraitLeft";
-					default = "32";
-					placeholder = "32";
+					label = X_AXIS;
+					key = "portraitXaxis";
+					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 				},
+			);
+		},
+		{
+			cell = PSLinkCell;
+			label = IN_LANDSCAPE_MODE;
+			detail = "VolumeControllerLandscapeVolumeHud";
+			title = VOLUME_HUD_IN_LANDSCAPE_MODE;
+			items = (
 				{
 					cell = PSGroupCell;
-					label = "Size of Landscape Volume HUD";
+					label = SIZE;
 				},
 				{
 					cell = PSSegmentCell;
@@ -310,138 +224,140 @@
 						1,
 					);
 					validTitles = (
-						Default,
-						"Simple",
-						"Custom",
+						DEFAULT,
+						SIMPLE,
+						CUSTOM,
 					);
 					height = 55;
 				},
 				{
 					cell = PSLinkListCell;
 					key = "simpleLandscapeSize";
-					label = "Size";
-					default = 999;
+					label = SIMPLE;
+					staticTextMessage = VOLUME_HUD_SIZE_INFO;
+					default = 2;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					detail = PSListItemsController;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 					validValues = (
-						999,
 						2,
 						1,
 						3,
 					);
 					validTitles = (
-						Default,
-						Small,
-						Regular,
-						Big,
+						SLIM,
+						MEDIUM,
+						BOLD,
 					);
 				},
 				{
 					cell = PSLinkCell;
-					label = "Custom";
-					detail = "PSListController";
-					title = "Custom";
+					label = CUSTOM;
+					detail = "VolumeControllerLandscapeVolumeHudCustomSize";
+					title = CUSTOM;
 					items = (
 						{
 							cell = PSGroupCell;
-							label = "Regular";
+							label = SLIM;
+							footerText = VOLUME_HUD_SIZE_INFO_SLIM;
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizeLandscapeFor1";
-							default = "209";
-							placeholder = "209";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizeLandscapeFor1";
-							default = "32";
-							placeholder = "32";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusLandscapeFor1";
-							default = "5.5";
-							placeholder = "5.5";
-							keyboard = numbers;
-							defaults = com.tomaszpoliszuk.volumecontroller;
-							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-						},
-						{
-							cell = PSGroupCell;
-							label = "Small";
-						},
-						{
-							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizeLandscapeFor2";
-							default = "238";
+							label = WIDTH_;
+							key = "landscapeState2Width";
 							placeholder = "238";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizeLandscapeFor2";
-							default = "5";
+							label = HEIGHT_;
+							key = "landscapeState2Height";
 							placeholder = "5";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusLandscapeFor2";
-							default = "2.5";
+							label = BORDER_RADIUS_;
+							key = "landscapeState2CornerRadius";
 							placeholder = "2.5";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSGroupCell;
-							label = "Big";
+							label = MEDIUM;
+							footerText = VOLUME_HUD_SIZE_INFO_MEDIUM;
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Width:";
-							key = "widthSizeLandscapeFor3";
-							default = "260";
+							label = WIDTH_;
+							key = "landscapeState1Width";
+							placeholder = "209";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSEditTextCell;
+							label = HEIGHT_;
+							key = "landscapeState1Height";
+							placeholder = "32";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSEditTextCell;
+							label = BORDER_RADIUS_;
+							key = "landscapeState1CornerRadius";
+							placeholder = "11";
+							keyboard = numbers;
+							isNumeric = 1;
+							defaults = com.tomaszpoliszuk.volumecontroller;
+							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+						},
+						{
+							cell = PSGroupCell;
+							label = BOLD;
+							footerText = VOLUME_HUD_SIZE_INFO_BOLD;
+						},
+						{
+							cell = PSEditTextCell;
+							label = WIDTH_;
+							key = "landscapeState3Width";
 							placeholder = "260";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Height:";
-							key = "heightSizeLandscapeFor3";
-							default = "37";
+							label = HEIGHT_;
+							key = "landscapeState3Height";
 							placeholder = "37";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
 						{
 							cell = PSEditTextCell;
-							label = "Border Radius:";
-							key = "borderRadiusLandscapeFor3";
-							default = "13";
+							label = BORDER_RADIUS_;
+							key = "landscapeState3CornerRadius";
 							placeholder = "13";
 							keyboard = numbers;
+							isNumeric = 1;
 							defaults = com.tomaszpoliszuk.volumecontroller;
 							PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 						},
@@ -449,40 +365,23 @@
 				},
 				{
 					cell = PSGroupCell;
-					label = "Position of Landscape Volume HUD";
-				},
-				{
-					cell = PSSegmentCell;
-					key = "controlLandscapePosition";
-					default = 999;
-					defaults = com.tomaszpoliszuk.volumecontroller;
-					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
-					validValues = (
-						999,
-						1,
-					);
-					validTitles = (
-						Default,
-						"Custom",
-					);
-					height = 55;
+					label = POSITION;
+					footerText = POSITION_INFO;
 				},
 				{
 					cell = PSEditTextCell;
-					label = "From Top:";
-					key = "positionLandscapeTop";
-					default = "20";
-					placeholder = "20";
+					label = Y_AXIS;
+					key = "landscapeYaxis";
+					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
 				},
 				{
 					cell = PSEditTextCell;
-					label = "From Left:";
-					key = "positionLandscapeLeft";
-					default = "368";
-					placeholder = "368";
+					label = X_AXIS;
+					key = "landscapeXaxis";
+					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
@@ -491,38 +390,55 @@
 		},
 		{
 			cell = PSGroupCell;
-			label = "Settings";
+			label = VOLUME_BUTTONS;
+			footerText = VOLUME_STEPS_INFO;
 		},
 		{
-			cell = PSButtonCell;
-			label = "Reset Settings";
-			action = resetSettings;
+			cell = PSEditTextCell;
+			key = "volumeSteps";
+			label = VOLUME_STEPS;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+			noAutoCorrect = 0;
+			keyboard = numbers;
+			isNumeric = 1;
+			placeholder = "16";
 		},
 		{
 			cell = PSGroupCell;
-			label = "Related Links";
+			label = " ";
 		},
 		{
 			cell = PSButtonCell;
-			label = "Source Code";
+			label = RESET_SETTINGS;
+			action = resetSettings;
+			alignment = center;
+		},
+		{
+			cell = PSGroupCell;
+			label = RELATED_LINKS;
+		},
+		{
+			cell = PSButtonCell;
+			label = SOURCE_CODE;
 			action = sourceCode;
 			icon = "icons/code.png";
 		},
 		{
 			cell = PSButtonCell;
-			label = "Report Issue @ GitHub";
-			action = reportIssueAtGithub;
+			label = KNOWN_ISSUES;
+			action = knownIssues;
 			icon = "icons/bug.png";
 		},
 		{
 			cell = PSButtonCell;
-			label = "Tomasz Poliszuk @ Github";
+			label = TOMASZ_POLISZUK_AT_GITHUB;
 			action = TomaszPoliszukAtGithub;
 			icon = "icons/github.png";
 		},
 		{
 			cell = PSButtonCell;
-			label = "Tomasz Poliszuk @ Twitter";
+			label = TOMASZ_POLISZUK_AT_TWITTER;
 			action = TomaszPoliszukAtTwitter;
 			icon = "icons/twitter.png";
 		},

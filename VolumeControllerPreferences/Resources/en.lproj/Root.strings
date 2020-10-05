@@ -1,0 +1,37 @@
+{
+	ENABLE_TWEAK = "Enable Tweak";
+	SIZE = "Size";
+	SLIM = "Slim";
+	MEDIUM = "Medium";
+	BOLD = "Bold";
+	DEFAULT = "Default";
+	SIMPLE = "Simple";
+	CUSTOM = "Custom";
+	WIDTH_ = "Width:";
+	HEIGHT_ = "Height:";
+	BORDER_RADIUS_ = "Border Radius:";
+	VOLUME_HUD = "Volume HUD";
+	VOLUME_HUD_INFO = "Control size and position of Volume HUD";
+	IN_PORTRAIT_MODE = "in Portrait mode";
+	IN_LANDSCAPE_MODE = "in Landscape mode";
+	VOLUME_HUD_IN_PORTRAIT_MODE = "Volume HUD in Portrait mode";
+	VOLUME_HUD_IN_LANDSCAPE_MODE = "Volume HUD in Landscape mode";
+	VOLUME_HUD_SIZE_INFO = "Volume HUD uses three sizes:\n\nMedium\none that shows after you press volume button once\n\nSlim\none that shows after you press volume button at least twice\n\nBold\none that shows after you touch Volume HUD";
+	VOLUME_HUD_SIZE_INFO_SLIM = "one that shows after you press volume button at least twice";
+	VOLUME_HUD_SIZE_INFO_MEDIUM = "one that shows after you press volume button once";
+	VOLUME_HUD_SIZE_INFO_BOLD = "one that shows after you touch Volume HUD";
+	POSITION = "Position";
+	POSITION_INFO = "Values here decide where the HUD will appear.\n\nx=0 & y=0\nmeans it will appear in the top left corner.\n\nx=100 & y=100\nmeans it will appear in the bottom right corner.";
+	POSITION_PLACEHOLDER = "Values in %";
+	X_AXIS = "X axis";
+	Y_AXIS = "Y axis";
+	VOLUME_BUTTONS = "Volume Buttons";
+	VOLUME_STEPS = "Steps";
+	VOLUME_STEPS_INFO = "How many times you need to press volume button to go from 0 to 100%";
+	RESET_SETTINGS = "Reset Settings";
+	RELATED_LINKS = "Related Links";
+	SOURCE_CODE = "Source Code";
+	KNOWN_ISSUES = "Known Issues";
+	TOMASZ_POLISZUK_AT_GITHUB = "Tomasz Poliszuk @ Github";
+	TOMASZ_POLISZUK_AT_TWITTER = "Tomasz Poliszuk @ Twitter";
+}

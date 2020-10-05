@@ -1,7 +1,7 @@
 Package: com.tomaszpoliszuk.volumecontroller
 Depends: firmware (>= 13.0), mobilesubstrate, preferenceloader
 Name: Volume Controller
-Version: 0.5
+Version: 1.0
 Architecture: iphoneos-arm
 Description: Control your Volume
 Author: Tomasz Poliszuk
