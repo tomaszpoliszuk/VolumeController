@@ -1,0 +1,37 @@
+{
+	ENABLE_TWEAK = "Habilitar Tweak";
+	SIZE = "Tamaño";
+	SLIM = "Delgado";
+	MEDIUM = "Medio";
+	BOLD = "Grueso";
+	DEFAULT = "Por defecto";
+	SIMPLE = "Simple";
+	CUSTOM = "Personalizado";
+	WIDTH_ = "Ancho:";
+	HEIGHT_ = "Alto:";
+	BORDER_RADIUS_ = "Radio del borde:";
+	VOLUME_HUD = "HUD de volumen";
+	VOLUME_HUD_INFO = "Tamaño del control y posición del HUD de volumen";
+	IN_PORTRAIT_MODE = "En modo Retrato";
+	IN_LANDSCAPE_MODE = "En modo Apaisado";
+	VOLUME_HUD_IN_PORTRAIT_MODE = "HUD de volumen en modo Retrato";
+	VOLUME_HUD_IN_LANDSCAPE_MODE = "HUD de volumen en modo Apaisado";
+	VOLUME_HUD_SIZE_INFO = "El HUD de volumen usa tres tamaños:\n\nMedio\nse muestra después de pulsar el botón de volumen al menos una vez\n\nDelgado\nse muestra después de pulsar el botón de volumen al menos dos veces\n\nGrueso\nse muestra después de pulsar el botón de volumen";
+	VOLUME_HUD_SIZE_INFO_SLIM = "se muestra después de pulsar el botón de volumen al menos dos veces";
+	VOLUME_HUD_SIZE_INFO_MEDIUM = "se muestra después de pulsar el botón de volumen al menos una vez";
+	VOLUME_HUD_SIZE_INFO_BOLD = "se muestra después de pulsar el HUD de volumen";
+	POSITION = "Posición";
+	POSITION_INFO = "Estos valores definen dónde se mostrará el HUD.\n\nx=0 & y=0\n significa que aparecerá en la esquina superior izquierda.\n\nx=100 & y=100\n significa que aparecerá en la esquina inferior derecha.";
+	POSITION_PLACEHOLDER = "Valores en %";
+	X_AXIS = "eje X";
+	Y_AXIS = "eje Y";
+	VOLUME_BUTTONS = "Botones de volumen";
+	VOLUME_STEPS = "Pasos";
+	VOLUME_STEPS_INFO = "Cuantas veces necesitas pulsar el botón de volumen para ir de 0 to 100%";
+	RESET_SETTINGS = "Restablecer ajustes";
+	RELATED_LINKS = "Enlaces relacionados";
+	SOURCE_CODE = "Código fuente";
+	KNOWN_ISSUES = "Problemas conocidos";
+	TOMASZ_POLISZUK_AT_GITHUB = "Tomasz Poliszuk @ Github";
+	TOMASZ_POLISZUK_AT_TWITTER = "Tomasz Poliszuk @ Twitter";
+}
