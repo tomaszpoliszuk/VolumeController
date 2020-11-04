@@ -32,6 +32,7 @@
 	RELATED_LINKS = "Enlaces relacionados";
 	SOURCE_CODE = "Código fuente";
 	KNOWN_ISSUES = "Problemas conocidos";
+	TOMASZ_POLISZUK_AT_BIGBOSS = "Tomasz Poliszuk @ BigBoss";
 	TOMASZ_POLISZUK_AT_GITHUB = "Tomasz Poliszuk @ Github";
 	TOMASZ_POLISZUK_AT_TWITTER = "Tomasz Poliszuk @ Twitter";
 }

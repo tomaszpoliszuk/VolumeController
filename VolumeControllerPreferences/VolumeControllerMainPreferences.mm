@@ -1,24 +1,36 @@
 #import <Preferences/PSListController.h>
+#import <Preferences/PSSpecifier.h>
 
-NSString *domainString = @"com.tomaszpoliszuk.volumecontroller";
+NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 
 @interface NSConcreteNotification : NSNotification
 @end
 @interface PSListController (VolumeController)
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification;
 @end
-@interface VolumeControllerMainPreferences : PSListController
+@interface VolumeControllerMainPreferences : PSListController {
+	NSMutableArray *removeSpecifiers;
+}
 @end
 @implementation VolumeControllerMainPreferences
 - (NSArray *)specifiers {
 	if (!_specifiers) {
 		_specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
+		if (kCFCoreFoundationVersionNumber >= 1740.00) {
+			removeSpecifiers = [[NSMutableArray alloc]init];
+			for(PSSpecifier* specifier in _specifiers) {
+				NSString* key = [specifier propertyForKey:@"key"];
+				if( [key hasPrefix:@"volumeSteps"] ) {
+					[removeSpecifiers addObject:specifier];
+				}
+			}
+			[_specifiers removeObjectsInArray:removeSpecifiers];
+		}
 	}
 	return _specifiers;
 }
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
-	[self.view endEditing:YES];
-	[super _returnKeyPressed:notification];
+- (void)loadView {
+	[super loadView];
+	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 - (void)resetSettings {
 	NSUserDefaults *tweakSettings = [[NSUserDefaults alloc] initWithSuiteName:domainString];
@@ -43,6 +55,12 @@ NSString *domainString = @"com.tomaszpoliszuk.volumecontroller";
 	NSURL *knownIssues = [NSURL URLWithString:@"https://github.com/tomaszpoliszuk/VolumeController/issues"];
 	[[UIApplication sharedApplication] openURL:knownIssues options:@{} completionHandler:nil];
 }
+-(void)TomaszPoliszukAtBigBoss {
+	UIApplication *application = [UIApplication sharedApplication];
+	NSString *tweakName = @"Volume+Controller";
+	NSURL *twitterWebsite = [NSURL URLWithString:[@"http://apt.thebigboss.org/developer-packages.php?name=" stringByAppendingString:tweakName]];
+	[application openURL:twitterWebsite options:@{} completionHandler:nil];
+}
 -(void)TomaszPoliszukAtGithub {
 	UIApplication *application = [UIApplication sharedApplication];
 	NSString *username = @"tomaszpoliszuk";
@@ -60,35 +78,35 @@ NSString *domainString = @"com.tomaszpoliszuk.volumecontroller";
 @interface VolumeControllerPortraitVolumeHud : PSListController
 @end
 @implementation VolumeControllerPortraitVolumeHud
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
-	[self.view endEditing:YES];
-	[super _returnKeyPressed:notification];
+- (void)loadView {
+	[super loadView];
+	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 @end
 
 @interface VolumeControllerPortraitVolumeHudCustomSize : PSListController
 @end
 @implementation VolumeControllerPortraitVolumeHudCustomSize
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
-	[self.view endEditing:YES];
-	[super _returnKeyPressed:notification];
+- (void)loadView {
+	[super loadView];
+	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 @end
 
 @interface VolumeControllerLandscapeVolumeHud : PSListController
 @end
 @implementation VolumeControllerLandscapeVolumeHud
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
-	[self.view endEditing:YES];
-	[super _returnKeyPressed:notification];
+- (void)loadView {
+	[super loadView];
+	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 @end
 
 @interface VolumeControllerLandscapeVolumeHudCustomSize : PSListController
 @end
 @implementation VolumeControllerLandscapeVolumeHudCustomSize
-- (void)_returnKeyPressed:(NSConcreteNotification *)notification {
-	[self.view endEditing:YES];
-	[super _returnKeyPressed:notification];
+- (void)loadView {
+	[super loadView];
+	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 }
 @end

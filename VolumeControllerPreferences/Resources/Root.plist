@@ -3,7 +3,7 @@
 	items = (
 		{
 			cell = PSSwitchCell;
-			key = "enableTweak";
+			key = enableTweak;
 			label = ENABLE_TWEAK;
 			default = 1;
 			defaults = com.tomaszpoliszuk.volumecontroller;
@@ -19,7 +19,7 @@
 		{
 			cell = PSLinkCell;
 			label = IN_PORTRAIT_MODE;
-			detail = "VolumeControllerPortraitVolumeHud";
+			detail = VolumeControllerPortraitVolumeHud;
 			title = VOLUME_HUD_IN_PORTRAIT_MODE;
 			items = (
 				{
@@ -28,7 +28,7 @@
 				},
 				{
 					cell = PSSegmentCell;
-					key = "controlPortraitSize";
+					key = controlPortraitSize;
 					default = 999;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
@@ -46,7 +46,7 @@
 				},
 				{
 					cell = PSLinkListCell;
-					key = "simplePortraitSize";
+					key = simplePortraitSize;
 					label = SIMPLE;
 					staticTextMessage = VOLUME_HUD_SIZE_INFO;
 					default = 2;
@@ -78,7 +78,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "portraitState2Width";
+							key = portraitState2Width;
 							placeholder = "7";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -88,7 +88,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "portraitState2Height";
+							key = portraitState2Height;
 							placeholder = "134";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -98,7 +98,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "portraitState2CornerRadius";
+							key = portraitState2CornerRadius;
 							placeholder = "3.5";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -113,7 +113,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "portraitState1Width";
+							key = portraitState1Width;
 							placeholder = "47";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -123,7 +123,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "portraitState1Height";
+							key = portraitState1Height;
 							placeholder = "148";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -133,7 +133,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "portraitState1CornerRadius";
+							key = portraitState1CornerRadius;
 							placeholder = "15";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -148,7 +148,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "portraitState3Width";
+							key = portraitState3Width;
 							placeholder = "58";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -158,7 +158,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "portraitState3Height";
+							key = portraitState3Height;
 							placeholder = "170";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -168,7 +168,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "portraitState3CornerRadius";
+							key = portraitState3CornerRadius;
 							placeholder = "18";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -185,7 +185,7 @@
 				{
 					cell = PSEditTextCell;
 					label = Y_AXIS;
-					key = "portraitYaxis";
+					key = portraitYaxis;
 					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
@@ -194,7 +194,7 @@
 				{
 					cell = PSEditTextCell;
 					label = X_AXIS;
-					key = "portraitXaxis";
+					key = portraitXaxis;
 					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
@@ -205,7 +205,7 @@
 		{
 			cell = PSLinkCell;
 			label = IN_LANDSCAPE_MODE;
-			detail = "VolumeControllerLandscapeVolumeHud";
+			detail = VolumeControllerLandscapeVolumeHud;
 			title = VOLUME_HUD_IN_LANDSCAPE_MODE;
 			items = (
 				{
@@ -214,7 +214,7 @@
 				},
 				{
 					cell = PSSegmentCell;
-					key = "controlLandscapeSize";
+					key = controlLandscapeSize;
 					default = 999;
 					defaults = com.tomaszpoliszuk.volumecontroller;
 					PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
@@ -232,7 +232,7 @@
 				},
 				{
 					cell = PSLinkListCell;
-					key = "simpleLandscapeSize";
+					key = simpleLandscapeSize;
 					label = SIMPLE;
 					staticTextMessage = VOLUME_HUD_SIZE_INFO;
 					default = 2;
@@ -253,7 +253,7 @@
 				{
 					cell = PSLinkCell;
 					label = CUSTOM;
-					detail = "VolumeControllerLandscapeVolumeHudCustomSize";
+					detail = VolumeControllerLandscapeVolumeHudCustomSize;
 					title = CUSTOM;
 					items = (
 						{
@@ -264,7 +264,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "landscapeState2Width";
+							key = landscapeState2Width;
 							placeholder = "238";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -274,7 +274,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "landscapeState2Height";
+							key = landscapeState2Height;
 							placeholder = "5";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -284,7 +284,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "landscapeState2CornerRadius";
+							key = landscapeState2CornerRadius;
 							placeholder = "2.5";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -299,7 +299,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "landscapeState1Width";
+							key = landscapeState1Width;
 							placeholder = "209";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -309,7 +309,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "landscapeState1Height";
+							key = landscapeState1Height;
 							placeholder = "32";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -319,7 +319,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "landscapeState1CornerRadius";
+							key = landscapeState1CornerRadius;
 							placeholder = "11";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -334,7 +334,7 @@
 						{
 							cell = PSEditTextCell;
 							label = WIDTH_;
-							key = "landscapeState3Width";
+							key = landscapeState3Width;
 							placeholder = "260";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -344,7 +344,7 @@
 						{
 							cell = PSEditTextCell;
 							label = HEIGHT_;
-							key = "landscapeState3Height";
+							key = landscapeState3Height;
 							placeholder = "37";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -354,7 +354,7 @@
 						{
 							cell = PSEditTextCell;
 							label = BORDER_RADIUS_;
-							key = "landscapeState3CornerRadius";
+							key = landscapeState3CornerRadius;
 							placeholder = "13";
 							keyboard = numbers;
 							isNumeric = 1;
@@ -371,7 +371,7 @@
 				{
 					cell = PSEditTextCell;
 					label = Y_AXIS;
-					key = "landscapeYaxis";
+					key = landscapeYaxis;
 					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
@@ -380,7 +380,7 @@
 				{
 					cell = PSEditTextCell;
 					label = X_AXIS;
-					key = "landscapeXaxis";
+					key = landscapeXaxis;
 					placeholder = POSITION_PLACEHOLDER;
 					keyboard = numbers;
 					defaults = com.tomaszpoliszuk.volumecontroller;
@@ -391,11 +391,12 @@
 		{
 			cell = PSGroupCell;
 			label = VOLUME_BUTTONS;
+			key = volumeStepsGroup;
 			footerText = VOLUME_STEPS_INFO;
 		},
 		{
 			cell = PSEditTextCell;
-			key = "volumeSteps";
+			key = volumeSteps;
 			label = VOLUME_STEPS;
 			defaults = com.tomaszpoliszuk.volumecontroller;
 			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
@@ -429,6 +430,12 @@
 			label = KNOWN_ISSUES;
 			action = knownIssues;
 			icon = "icons/bug.png";
+		},
+		{
+			cell = PSButtonCell;
+			label = TOMASZ_POLISZUK_AT_BIGBOSS;
+			action = TomaszPoliszukAtBigBoss;
+			icon = "icons/packages.png";
 		},
 		{
 			cell = PSButtonCell;

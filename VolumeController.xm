@@ -1,6 +1,35 @@
-NSString *domainString = @"com.tomaszpoliszuk.volumecontroller";
+@interface SBElasticVolumeViewController : UIViewController
+- (unsigned long long)axis;
+@end
+@interface SBVolumeHUDSettings
+-(double)portraitState1CornerRadius;
+-(double)portraitState1Height;
+-(double)portraitState1Width;
+-(double)portraitState2CornerRadius;
+-(double)portraitState2Height;
+-(double)portraitState2Width;
+-(double)portraitState3CornerRadius;
+-(double)portraitState3Height;
+-(double)portraitState3Width;
 
-static BOOL enableTweak;
+-(double)landscapeState1CornerRadius;
+-(double)landscapeState1Height;
+-(double)landscapeState1Width;
+-(double)landscapeState2CornerRadius;
+-(double)landscapeState2Height;
+-(double)landscapeState2Width;
+-(double)landscapeState3CornerRadius;
+-(double)landscapeState3Height;
+-(double)landscapeState3Width;
+@end
+
+@interface SpringBoard
+- (UIInterfaceOrientation)activeInterfaceOrientation;
+@end
+
+NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
+
+static bool enableTweak;
 
 static int controlPortraitSize;
 static int simplePortraitSize;
@@ -94,31 +123,6 @@ void SettingsChanged () {
 
 	volumeSteps = [[tweakSettings valueForKey:@"volumeSteps"] floatValue];
 }
-
-@interface SBElasticVolumeViewController : UIViewController
-- (unsigned long long)axis;
-@end
-@interface SBVolumeHUDSettings
--(double)portraitState1CornerRadius;
--(double)portraitState1Height;
--(double)portraitState1Width;
--(double)portraitState2CornerRadius;
--(double)portraitState2Height;
--(double)portraitState2Width;
--(double)portraitState3CornerRadius;
--(double)portraitState3Height;
--(double)portraitState3Width;
-
--(double)landscapeState1CornerRadius;
--(double)landscapeState1Height;
--(double)landscapeState1Width;
--(double)landscapeState2CornerRadius;
--(double)landscapeState2Height;
--(double)landscapeState2Width;
--(double)landscapeState3CornerRadius;
--(double)landscapeState3Height;
--(double)landscapeState3Width;
-@end
 
 %hook SBVolumeHUDSettings
 -(double)portraitState1Width {
