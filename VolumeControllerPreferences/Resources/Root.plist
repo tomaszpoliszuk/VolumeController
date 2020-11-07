@@ -13,6 +13,54 @@
 		},
 		{
 			cell = PSGroupCell;
+			label = HUD_TYPE_IN_PORTRAIT_ORIENTATION;
+		},
+		{
+			cell = PSSegmentCell;
+			key = hudTypeInPortraitOrientation;
+			default = 999;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+			validValues = (
+				999,
+				0,
+				1,
+				2,
+			);
+			validTitles = (
+				DEFAULT,
+				DISABLE,
+				HORIZONTAL,
+				VERTICAL,
+			);
+			height = 55;
+		},
+		{
+			cell = PSGroupCell;
+			label = HUD_TYPE_IN_LANDSCAPE_ORIENTATION;
+		},
+		{
+			cell = PSSegmentCell;
+			key = hudTypeInLandscapeOrientation;
+			default = 999;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+			validValues = (
+				999,
+				0,
+				1,
+				2,
+			);
+			validTitles = (
+				DEFAULT,
+				DISABLE,
+				HORIZONTAL,
+				VERTICAL,
+			);
+			height = 55;
+		},
+		{
+			cell = PSGroupCell;
 			label = VOLUME_HUD;
 			footerText = VOLUME_HUD_INFO;
 		},

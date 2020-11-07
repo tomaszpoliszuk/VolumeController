@@ -1,5 +1,10 @@
 {
 	ENABLE_TWEAK = "Tweak an/aus";
+	HUD_TYPE_IN_PORTRAIT_ORIENTATION = "Lautstärke-HUD im Hochformat";
+	HUD_TYPE_IN_LANDSCAPE_ORIENTATION = "Lautstärke-HUD im Querformat";
+	VERTICAL = "Vertikal";
+	HORIZONTAL = "Horizontal";
+	DISABLE = "Inaktiv";
 	SIZE = "Größe anpassen";
 	SLIM = "Schmal";
 	MEDIUM = "Mittelgroß";
@@ -28,7 +33,7 @@
 	VOLUME_BUTTONS = "Lautstärke-Buttons";
 	VOLUME_STEPS = "Schritte der Lautstärkeregelung";
 	VOLUME_STEPS_INFO = "Wie oft der Lautstärkebutton gedrückt werden muss, um von 0 auf 100% zu kommen";
-	RESET_SETTINGS = "Einstellungen zurücksetzen";
+	RESET_SETTINGS = "Alles zurücksetzen";
 	RELATED_LINKS = "Links";
 	SOURCE_CODE = "Source Code";
 	KNOWN_ISSUES = "Bekannte Probleme";

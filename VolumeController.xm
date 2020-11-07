@@ -31,6 +31,9 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 
 static bool enableTweak;
 
+static long long hudTypeInPortraitOrientation;
+static long long hudTypeInLandscapeOrientation;
+
 static int controlPortraitSize;
 static int simplePortraitSize;
 
@@ -79,6 +82,9 @@ void SettingsChanged () {
 	NSUserDefaults *tweakSettings = [[NSUserDefaults alloc] initWithSuiteName:domainString];
 
 	enableTweak = [ ( [tweakSettings objectForKey:@"enableTweak"] ?: @ ( YES ) ) boolValue];
+
+	hudTypeInPortraitOrientation = [([tweakSettings valueForKey:@"hudTypeInPortraitOrientation"] ?: @(999)) integerValue];
+	hudTypeInLandscapeOrientation = [([tweakSettings valueForKey:@"hudTypeInLandscapeOrientation"] ?: @(999)) integerValue];
 
 	controlPortraitSize = [ ( [tweakSettings valueForKey:@"controlPortraitSize"] ?: @ ( 999 ) ) integerValue];
 	simplePortraitSize = [ ( [tweakSettings valueForKey:@"simplePortraitSize"] ?: @ ( 2 ) ) integerValue];
@@ -447,6 +453,20 @@ void SettingsChanged () {
 %end
 
 %hook SBElasticVolumeViewController
+- (unsigned long long)axis {
+	unsigned long long origValue = %orig;
+	if ( enableTweak ) {
+		UIInterfaceOrientation orientation = [(SpringBoard*)[UIApplication sharedApplication] activeInterfaceOrientation];
+		bool portraitOrientation = !UIInterfaceOrientationIsLandscape(orientation);
+		if ( portraitOrientation && hudTypeInPortraitOrientation != 999 ) {
+			return hudTypeInPortraitOrientation;
+		}
+		if ( !portraitOrientation && hudTypeInLandscapeOrientation != 999 ) {
+			return hudTypeInLandscapeOrientation;
+		}
+	}
+	return origValue;
+}
 //	state
 //	2	=	Small
 //	1	=	Regular

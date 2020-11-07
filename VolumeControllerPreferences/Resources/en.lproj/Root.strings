@@ -1,5 +1,10 @@
 {
 	ENABLE_TWEAK = "Enable Tweak";
+	HUD_TYPE_IN_PORTRAIT_ORIENTATION = "HUD Type in Portrait Orientation";
+	HUD_TYPE_IN_LANDSCAPE_ORIENTATION = "HUD Type in Landscape Orientation";
+	VERTICAL = "Vertical";
+	HORIZONTAL = "Horizontal";
+	DISABLE = "Disable";
 	SIZE = "Size";
 	SLIM = "Slim";
 	MEDIUM = "Medium";
