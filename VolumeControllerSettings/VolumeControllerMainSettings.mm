@@ -7,11 +7,11 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 @end
 @interface PSListController (VolumeController)
 @end
-@interface VolumeControllerMainPreferences : PSListController {
+@interface VolumeControllerMainSettings : PSListController {
 	NSMutableArray *removeSpecifiers;
 }
 @end
-@implementation VolumeControllerMainPreferences
+@implementation VolumeControllerMainSettings
 - (NSArray *)specifiers {
 	if (!_specifiers) {
 		_specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];

@@ -3,9 +3,9 @@ ARCHS = arm64 arm64e
 
 include $(THEOS)/makefiles/common.mk
 
-BUNDLE_NAME = VolumeControllerPreferences
+BUNDLE_NAME = VolumeControllerSettings
 
-$(BUNDLE_NAME)_FILES = VolumeControllerMainPreferences.mm
+$(BUNDLE_NAME)_FILES = VolumeControllerMainSettings.mm
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
 $(BUNDLE_NAME)_FRAMEWORKS = UIKit
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences

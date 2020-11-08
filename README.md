@@ -12,7 +12,7 @@ Configure options from Settings, no respring needed.
 
 Shoutout goes to u/bndrnt from reddit for helping with polishing the tweak settings and the German translation.
 
-If you wish to add localization in your language please use [this file](https://github.com/tomaszpoliszuk/VolumeController/blob/master/VolumeControllerPreferences/Resources/en.lproj/Root.strings) - if you have any issues feel free to contact me directly.
+If you wish to add localization in your language please use [this file](https://github.com/tomaszpoliszuk/VolumeController/blob/master/VolumeControllerSettings/Resources/en.lproj/Root.strings) - if you have any issues feel free to contact me directly.
 
 
 ## Screenshots:

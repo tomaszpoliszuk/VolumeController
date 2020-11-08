@@ -3,8 +3,8 @@
 		cell = PSLinkCell;
 		isController = 1;
 		label = "Volume Controller";
-		bundle = VolumeControllerPreferences;
-		detail = VolumeControllerMainPreferences;
+		bundle = VolumeControllerSettings;
+		detail = VolumeControllerMainSettings;
 		icon = icons/VolumeController.png;
 	};
 }

@@ -8,4 +8,4 @@ Author: Tomasz Poliszuk
 Section: Tweaks
 dev: tomaszpoliszuk
 Tag: purpose::extension, compatible::ios13
-Icon: file:///Library/PreferenceBundles/VolumeControllerPreferences.bundle/icons/VolumeController@3x.png
+Icon: file:///Library/PreferenceBundles/VolumeControllerSettings.bundle/icons/VolumeController@3x.png
