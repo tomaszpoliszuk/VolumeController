@@ -1,11 +1,11 @@
 Package: com.tomaszpoliszuk.volumecontroller
 Depends: firmware (>= 13.0), mobilesubstrate, preferenceloader
 Name: Volume Controller
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Description: Control your Volume
 Author: Tomasz Poliszuk
 Section: Tweaks
 dev: tomaszpoliszuk
-Tag: purpose::extension, compatible::ios13
+Tag: purpose::extension
 Icon: file:///Library/PreferenceBundles/VolumeControllerSettings.bundle/icons/VolumeController@3x.png
