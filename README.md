@@ -1,7 +1,8 @@
-# Volume Controller - Control your Volume
+# Volume Controller
+Control your Volume
 
 ## Compatibility
-For iOS 13 and above
+* iOS 13 and above
 
 ## What you can do with this tweak:
 - **Look of Volume HUD**
@@ -12,7 +13,7 @@ For iOS 13 and above
 	* Default iOS behavior is 16 steps, which means that every time you press one of the volume buttons the volume changes about 6.25%.
 	* Volume Controller allows you to change the number of steps it takes to change the volume from 0% to 100%, e.g. a value of 50 means you have to press the volume up button 50 times to go from 0% to maximum volume.
 
-Configure options from Settings, no respring needed.
+**Configure options from Settings, no respring needed.**
 
 Shoutout goes to u/bndrnt from reddit for helping with polishing the tweak settings and the German translation.
 Spanish translation provided by [Retosteante](https://twitter.com/Retosteante) from twitter.

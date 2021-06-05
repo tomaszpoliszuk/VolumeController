@@ -1,0 +1,110 @@
+{
+	title = CUSTOM;
+	items = (
+		{
+			cell = PSGroupCell;
+			label = SLIM;
+			footerText = VOLUME_HUD_SIZE_INFO_SLIM;
+		},
+		{
+			cell = PSEditTextCell;
+			label = WIDTH_;
+			key = portraitState2Width;
+			placeholder = "7";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = HEIGHT_;
+			key = portraitState2Height;
+			placeholder = "134";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = BORDER_RADIUS_;
+			key = portraitState2CornerRadius;
+			placeholder = "3.5";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSGroupCell;
+			label = MEDIUM;
+			footerText = VOLUME_HUD_SIZE_INFO_MEDIUM;
+		},
+		{
+			cell = PSEditTextCell;
+			label = WIDTH_;
+			key = portraitState1Width;
+			placeholder = "47";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = HEIGHT_;
+			key = portraitState1Height;
+			placeholder = "148";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = BORDER_RADIUS_;
+			key = portraitState1CornerRadius;
+			placeholder = "15";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSGroupCell;
+			label = BOLD;
+			footerText = VOLUME_HUD_SIZE_INFO_BOLD;
+		},
+		{
+			cell = PSEditTextCell;
+			label = WIDTH_;
+			key = portraitState3Width;
+			placeholder = "58";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = HEIGHT_;
+			key = portraitState3Height;
+			placeholder = "170";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = BORDER_RADIUS_;
+			key = portraitState3CornerRadius;
+			placeholder = "18";
+			keyboard = numbers;
+			isNumeric = 1;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+	);
+}

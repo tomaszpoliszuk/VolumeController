@@ -45,6 +45,11 @@
 - (UIInterfaceOrientation)activeInterfaceOrientation;
 @end
 
+@interface AVSystemController : NSObject
++(id)sharedAVSystemController;
+-(BOOL)changeActiveCategoryVolumeBy:(float)arg1;
+@end
+
 NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 
 static bool enableTweak;
@@ -470,6 +475,31 @@ void SettingsChanged () {
 }
 %end
 
+%group iOS14up
+
+%hook SBVolumeControl
+-(void)decreaseVolume {
+	if ( enableTweak && volumeSteps > 0 ) {
+		float newVolumeSteps = -100 / volumeSteps / 100;
+		[[%c(AVSystemController) sharedAVSystemController] changeActiveCategoryVolumeBy:newVolumeSteps];
+	} else {
+		%orig;
+	}
+
+}
+-(void)increaseVolume {
+	if ( enableTweak && volumeSteps > 0 ) {
+		float newVolumeSteps = 100 / volumeSteps / 100;
+		[[%c(AVSystemController) sharedAVSystemController] changeActiveCategoryVolumeBy:newVolumeSteps];
+	} else {
+		%orig;
+	}
+
+}
+%end
+
+%end
+
 %hook SBElasticVolumeViewController
 - (unsigned long long)axis {
 	unsigned long long origValue = %orig;
@@ -570,4 +600,7 @@ void SettingsChanged () {
 		CFNotificationSuspensionBehaviorDeliverImmediately
 	);
 	%init;
+	if (kCFCoreFoundationVersionNumber >= 1740.00) {
+		%init(iOS14up);
+	}
 }

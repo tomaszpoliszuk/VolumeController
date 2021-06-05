@@ -33,16 +33,6 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 - (NSArray *)specifiers {
 	if (!_specifiers) {
 		_specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
-		if (kCFCoreFoundationVersionNumber >= 1740.00) {
-			removeSpecifiers = [[NSMutableArray alloc]init];
-			for(PSSpecifier* specifier in _specifiers) {
-				NSString* key = [specifier propertyForKey:@"key"];
-				if( [key hasPrefix:@"volumeSteps"] ) {
-					[removeSpecifiers addObject:specifier];
-				}
-			}
-			[_specifiers removeObjectsInArray:removeSpecifiers];
-		}
 	}
 	return _specifiers;
 }
@@ -96,6 +86,12 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 @interface VolumeControllerPortraitVolumeHud : PSListController
 @end
 @implementation VolumeControllerPortraitVolumeHud
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [self loadSpecifiersFromPlistName:@"PortraitVolumeHud" target:self];
+	}
+	return _specifiers;
+}
 - (void)loadView {
 	[super loadView];
 	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
@@ -105,6 +101,12 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 @interface VolumeControllerPortraitVolumeHudCustomSize : PSListController
 @end
 @implementation VolumeControllerPortraitVolumeHudCustomSize
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [self loadSpecifiersFromPlistName:@"PortraitVolumeHudCustomSize" target:self];
+	}
+	return _specifiers;
+}
 - (void)loadView {
 	[super loadView];
 	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
@@ -114,6 +116,12 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 @interface VolumeControllerLandscapeVolumeHud : PSListController
 @end
 @implementation VolumeControllerLandscapeVolumeHud
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [self loadSpecifiersFromPlistName:@"LandscapeVolumeHud" target:self];
+	}
+	return _specifiers;
+}
 - (void)loadView {
 	[super loadView];
 	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
@@ -123,6 +131,12 @@ NSString *const domainString = @"com.tomaszpoliszuk.volumecontroller";
 @interface VolumeControllerLandscapeVolumeHudCustomSize : PSListController
 @end
 @implementation VolumeControllerLandscapeVolumeHudCustomSize
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [self loadSpecifiersFromPlistName:@"LandscapeVolumeHudCustomSize" target:self];
+	}
+	return _specifiers;
+}
 - (void)loadView {
 	[super loadView];
 	((UITableView *)[self table]).keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;

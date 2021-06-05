@@ -1,0 +1,75 @@
+{
+	title = VOLUME_HUD_IN_PORTRAIT_MODE;
+	items = (
+		{
+			cell = PSGroupCell;
+			label = SIZE;
+		},
+		{
+			cell = PSSegmentCell;
+			key = controlPortraitSize;
+			default = 999;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+			validValues = (
+				999,
+				0,
+				1,
+			);
+			validTitles = (
+				DEFAULT,
+				SIMPLE,
+				CUSTOM,
+			);
+			height = 55;
+		},
+		{
+			cell = PSLinkListCell;
+			key = simplePortraitSize;
+			label = SIMPLE;
+			staticTextMessage = VOLUME_HUD_SIZE_INFO;
+			default = 2;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			detail = PSListItemsController;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+			validValues = (
+				2,
+				1,
+				3,
+			);
+			validTitles = (
+				SLIM,
+				MEDIUM,
+				BOLD,
+			);
+		},
+		{
+			cell = PSLinkCell;
+			label = CUSTOM;
+			detail = "VolumeControllerPortraitVolumeHudCustomSize";
+		},
+		{
+			cell = PSGroupCell;
+			label = POSITION;
+			footerText = POSITION_INFO;
+		},
+		{
+			cell = PSEditTextCell;
+			label = Y_AXIS;
+			key = portraitYaxis;
+			placeholder = POSITION_PLACEHOLDER;
+			keyboard = numbers;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+		{
+			cell = PSEditTextCell;
+			label = X_AXIS;
+			key = portraitXaxis;
+			placeholder = POSITION_PLACEHOLDER;
+			keyboard = numbers;
+			defaults = com.tomaszpoliszuk.volumecontroller;
+			PostNotification = "com.tomaszpoliszuk.volumecontroller.settingschanged";
+		},
+	);
+}
